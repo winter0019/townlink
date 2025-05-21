@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TownLink Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TownLink: Connecting Communities to Local Businesses</h1>
+      <p>Discover and support businesses in your community. Know one we missed?</p>
+      <button id="toggleFormBtn">Add Your Business</button>
+    </header>
+
+    <input type="text" id="searchInput" placeholder="Search by name, category, or LGA" />
+
+    <div id="businessGrid" class="grid"></div>
+
+    <!-- Add Business Form -->
+    <div id="addFormContainer" class="modal hidden">
+      <div class="modal-content">
+        <h3>Add Your Business</h3>
+        <input id="bizName" placeholder="Business Name" />
+        <input id="bizCategory" placeholder="Category" />
+        <input id="bizLga" placeholder="LGA" />
+        <input id="bizAddress" placeholder="Address" />
+        <input id="bizPhone" placeholder="Phone" />
+        <textarea id="bizDescription" placeholder="Description"></textarea>
+        <div class="actions">
+          <button id="cancelForm">Cancel</button>
+          <button id="submitBiz">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal hidden">
+      <div class="modal-content">
+        <h3 id="reviewTitle"></h3>
+        <textarea id="reviewText" placeholder="Write your review here..."></textarea>
+        <div id="ratingStars"></div>
+        <div class="actions">
+          <button id="cancelReview">Cancel</button>
+          <button id="submitReview">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
